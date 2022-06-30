@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline CSS vs External Files</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    .c1 {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>Inline CSS</h2>
+    <p>
+      An inline CSS is used to apply a unique style to a single HTML element.
+    </p>
+    <p>
+      An inline CSS uses the <code class="c1">style</code> attribute of an HTML
+      element.
+    </p>
+    <h3>Example</h3>
+    <p style="color: blue">This example colors the paragraph blue.</p>
+    <h2>External CSS</h2>
+    <p>An external style sheet is used to define the style for many HTML pages.</p>
+    <p>To use an external style sheet, add a link in the <code class="c1">&#60head&#62</code> section of each HTML page.</p>
+    <p>Notice how the page is styled based on the external css file. This example only styles the  body of the page.</p>
+  </body>
+</html>

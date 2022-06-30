@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <style>
+      .c1 {
+          color: red;
+      }
+  </style>
+  <body>
+    <h1>HTML Forms</h1>
+    <p>
+      An HTML form is used to collect user input. The user input is most often
+      sent to a server for processing.
+    </p>
+    <h2>1. The &#60form&#62 Element</h2>
+    <p>The HTML <code class="c1">&#60form&#62</code> element is used to create an HTML form for user input.</p>
+    <p>The <code class="c1">&#60form&#62</code> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+    <h2>2. The <code>&#60input&#62</code> Element</h2>
+    <p>The <code class="c1">&#60input&#62</code> tag specifies an input field where the user can enter data.</p>
+    <p>It is the most important form element and can be displayed in several ways, depending on the type attribute.</p>
+    <h2>3. The Action Attribute</h2>
+    <p>The <code class="c1">action</code> attribute defines the action to be performed when the form is submitted.</p>
+    <p>Usually, the form data is sent to a file on the server when the user clicks on the submit button.</p>
+    <h2>4. The Target Attribute</h2>
+    <p>The <code class="c1">target</code> attribute specifies where to display the response that is received after submitting the form.</p>
+    <p>It can have one of the following values:</p>
+    <uo>
+        <li>_blank - The response is displayed in a new window or tab</li>
+        <li>_self - The response is displayed in the current window</li>
+        <li>_parent - The response is displayed in the parent frame</li>
+        <li>_top - The response is displayed in the full body of the window</li>
+        <li><i>framename</i> - The response is displayed in a named iframe</li>
+    </uo>
+    <h2>5. The Method Attribute</h2>
+    <p>The <code class="c1">method</code> attribute specifies the HTTP method to be used when submitting the form data.</p>
+    <p>The form-data can be sent as URL variables (with <code class="c1">method="get"</code>) or as HTTP post transaction (with <code class="c1">method="post"</code>).</p>
+    <p>The default HTTP method when submitting form data is GET.</p>
+    <h2>6. The Submit Button</h2>
+    <p>The <code class="c1">&#60input type="submit"&#62</code> defines a button for submitting the form data to a form-handler.</p>
+    <p>The form-handler is typically a file on the server with a script for processing input data.</p>
+    <p>The form-handler is specified in the form's <code class="c1">action</code> attribute.</p>
+    <h2>Example</h2>
+    <p>The example below uses a form to call the <code>action_page.php</code> page after the user hits the submit button:</p>
+    <form action="action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Jermal"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Wynder"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><b>*Note:</b> the example above is only used to display the code for a form. It doesn't actually call the listed file in the description on the example.</p>      
+  </body>
+</html>

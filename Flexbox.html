@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+  </head>
+  <style>
+    .flex-container {
+      display: flex;
+      background-color: red;
+    }
+    .flex-container > div {
+      background-color: white;
+      margin: 5px;
+      padding: 10px;
+      font-size: 20px;
+    }
+    .flex-container2 {
+      display: flex;
+      flex-direction: column;
+      background-color: red;
+    }
+    .flex-container2 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container3 {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: red;
+    }
+    .flex-container3 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container4 {
+      display: flex;
+      flex-flow: row wrap;
+      background-color: red;
+    }
+    .flex-container4 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container5 {
+      display: flex;
+      justify-content: center;
+      background-color: red;
+    }
+    .flex-container5 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container6 {
+      display: flex;
+      height: 200px;
+      align-items: flex-start;
+      background-color: red;
+    }
+    .flex-container6 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container7 {
+      display: flex;
+      height: 600px;
+      flex-wrap: wrap;
+      align-content: space-around;
+      background-color: red;
+    }
+    .flex-container7 > div {
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container8 {
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container8 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container9 {
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container9 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container10 {
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container10 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container11 {
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container11 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container12 {
+      display: flex;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container12 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .flex-container13 {
+      display: flex;
+      height: 200px;
+      align-items: stretch;
+      background-color: white;
+    }
+    .flex-container13 > div {
+      background-color: red;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 20px;
+    }
+    .c1 {
+      color: red;
+    }
+  </style>
+  <body>
+    <h1>Flexbox</h1>
+    <p>
+      The flexbox layout is one-dimensional layout method for laying out items
+      in rows or columns. Items flex to fill additional space and shrink to fit
+      into smaller spaces.
+    </p>
+    <p>
+      A flexible layout must have a parent element with the display property set
+      to flex.
+    </p>
+    <p>
+      Direct child elements of the flexible container automatically becomes
+      flexible items.
+    </p>
+    <p>
+      To start using the Flexbox model, you need to first define a flex
+      container. The flex container becomes flexible by setting the
+      <code class="c1">display</code> to <code class="c1">flex</code>.
+    </p>
+    <p>
+      The example below represents a flex container (red area) with 5 flex
+      items:
+    </p>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <h2>Parent Element (Container)</h2>
+    <p>There are 6 flex container proeperties:</p>
+    <uo>
+      <li>flex-direction</li>
+      <li>flex-wrap</li>
+      <li>flex-flow</li>
+      <li>justify-content</li>
+      <li>align-items</li>
+      <li>align-content</li>
+    </uo>
+    <h3>1. Flex-direction</h3>
+    <p>
+      The <code class="c1">flex-direction</code> property defines in which
+      direction the container wants to stack the flex items.
+    </p>
+    <h4>Example</h4>
+    <p>
+      The example below stacks the flex items vertically using the
+      <code class="c1">column</code> vlaue:
+    </p>
+    <div class="flex-container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>2. Flex-wrap</h3>
+    <p>
+      The <code class="c1">flex-wrap</code> property specifies whether the flex
+      items should wrap or not.
+    </p>
+    <h4>Example</h4>
+    <p>
+      The example below uses the <code class="c1">wrap</code> value to specify
+      that the items will wrap if necessary:
+    </p>
+    <div class="flex-container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h3>3. Flex-flow</h3>
+    <p>
+      The <code class="c1">flex-flow</code> property is a shorthand property for
+      setting both the <code class="c1">flex-direction</code> and
+      <code class="c1">flex-wrap</code> properties.
+    </p>
+    <h4>Example</h4>
+    <p>
+      The <code class="c1">flex-flow</code> property is a shorthand property for
+      the <code class="c1">flex-direction</code> and the
+      <code class="c1">flex-wrap</code> properties.
+    </p>
+    <div class="flex-container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h3>4. Justify-content</h3>
+    <p>
+      The <code class="c1">justify-content</code> property is used to align the
+      flex items.
+    </p>
+    <h4>Example</h4>
+    <p>
+      The example below uses the <code class="c1">center</code> value to align
+      the flex items at the center of the container:
+    </p>
+    <div class="flex-container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>5. Align-items</h3>
+    <p>
+      The <code class="c1">align-items</code> property is another way to align
+      the flex items.
+    </p>
+    <h4>Example</h4>
+    <p>
+      In the example below, the <code class="c1">flex-start</code> value aligns
+      the flex items at the top of the container:
+    </p>
+    <div class="flex-container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>6. Align-content</h3>
+    <p>
+      The <code class="c1">align-content</code> property is another way to align
+      flex lines.
+    </p>
+    <h4>Example</h4>
+    <p>
+      In the example below, I used <code class="c1">space-around</code>, along
+      with the <code class="c1">flex-wrap</code> property set to
+      <code class="c1">wrap</code>, to better demonstrate the
+      <code class="c1">align-content</code> property:
+    </p>
+    <div class="flex-container7">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h2>Child Elements (Items)</h2>
+    <p>There are 6 flex item proeperties:</p>
+    <uo>
+      <li>order</li>
+      <li>flex-grow</li>
+      <li>flex-shrink</li>
+      <li>flex-basis</li>
+      <li>flex</li>
+      <li>align-self</li>
+    </uo>
+    <h3>1. Order</h3>
+    <p>
+      The <code class="c1">order</code> property specifies the order of the flex
+      items.
+    </p>
+    <h4>Example</h4>
+    <p>The example below sorts the flex items as you like:</p>
+    <div class="flex-container8">
+      <div style="order: 3">1</div>
+      <div style="order: 1">2</div>
+      <div style="order: 4">3</div>
+      <div style="order: 2">4</div>
+    </div>
+    <h3>2. Flex-grow</h3>
+    <p>
+      The <code class="c1">flex-grow</code> property specifies how much a flex
+      item will grow relative to the rest of the flex items.
+    </p>
+    <h4>Example</h4>
+    <p>
+      Make the third flex item grow 5 times faster than the other flex items:
+    </p>
+    <div class="flex-container9">
+      <div style="flex-grow: 1">1</div>
+      <div style="flex-grow: 1">2</div>
+      <div style="flex-grow: 5">3</div>
+    </div>
+    <h3>3. Flex-shrink</h3>
+    <p>
+      The <code class="c1">flex-shrink</code> property specifies how much a flex
+      item will shrink relative to the rest of the flex items.
+    </p>
+    <h4>Example</h4>
+    <p>
+      Make the second flex item shrink 10 times faster than the other flex
+      items:
+    </p>
+    <div class="flex-container10">
+      <div>1</div>
+      <div style="flex-shrink: 10">2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h3>4. Flex-basis</h3>
+    <p>
+      The <code class="c1">flex-basis</code> property specifies the initial
+      length of a flex item.
+    </p>
+    <h4>Example</h4>
+    <p>Set the initial length of the first flex item to 500 pixels:</p>
+    <div class="flex-container11">
+      <div style="flex-basis: 500px">1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h3>5. Flex</h3>
+    <p>
+      The <code>flex</code> property is a shorthand property for the
+      <code class="c1">flex-grow</code>, <code class="c1">flex-shrink</code>,
+      and <code class="c1">flex-basis</code> properties.
+    </p>
+    <h4>Example</h4>
+    <p>
+      Make the second item not growable, not shrinkable, and with an initial
+      length of 600 pixels:
+    </p>
+    <div class="flex-container12">
+      <div>1</div>
+      <div style="flex: 0 0 600px">2</div>
+      <div>3</div>
+    </div>
+    <h3>6. Align-self</h3>
+    <p>
+      The <code class="c1">align-self</code> property specifies the alignment
+      for the selected item inside the flexible container.
+    </p>
+    <p>
+      This property overrides the default alignment set by the container's
+      <code class="c1">align-items</code> property.
+    </p>
+    <h4>Example</h4>
+    <p>
+      The "align-self: center;" aligns the selected flex item in the middle of
+      the container:
+    </p>
+    <div class="flex-container13">
+      <div>1</div>
+      <div>2</div>
+      <div style="align-self: center">3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>

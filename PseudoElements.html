@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-Elements</title>
+  </head>
+  <style>
+    .c1 {
+      color: red;
+    }
+    h3::first-letter {
+      color: blue;
+    }
+    h4::before {
+      content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
+    }
+  </style>
+  <body>
+    <h1>Pseudo-Elements</h1>
+    <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+    <p>It can be used to do the following:</p>
+    <uo>
+      <li>Style the first letter, or line, of an element</li>
+      <li>Insert content before, or after, the content of an element</li>
+    </uo>
+    <h2>Syntax</h2>
+    <p>The syntax of pseudo-elements:</p>
+    <div>
+      <span style="color: brown">selector::pseduo-element</span>
+      <span>{</span>
+      <br />
+      <span style="color: red">property</span><span>:</span>
+      <span style="color: mediumblue">value</span><span>;</span>
+      <br />
+      <span>}</span>
+    </div>
+    <h2>Examples</h2>
+    <p>The following example formats (changes to blue) the first letter of the text in the &#60h3&#62 element below:</p>
+    <h3>You can use the <code class="c1">::first-letter</code> pseudo-element to add a special effect to the first line of a text.</h3>
+    <p>The following example inserts an image (Mozilla icon) before the content of the &#60h4&#62 element below:</p>
+    <h4>You can use the <code class="c1">::before</code> pseudo-element to insert some content before the content of an element.</h4>
+  </body>
+</html>

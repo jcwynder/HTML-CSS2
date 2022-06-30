@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-Classes</title>
+  </head>
+  <style>
+    /* class element example */
+    a.highlight:hover {
+      color: red;
+    }
+    /* unvisited link */
+    a:link {
+      color: orange;
+    }
+    /* visited link */
+    a:visited {
+      color: green;
+    }
+    /* mouse over link */
+    a:hover {
+      color: blueviolet;
+    }
+    /* selected link */
+    a:active {
+      color: yellow;
+    }
+    div {
+      background-color: goldenrod;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+    div:hover {
+      background-color: purple;
+    }
+  </style>
+  <body>
+    <h1>Pseudo-Classes</h1>
+    <p>A pseudo-class is used to define a special state of an element.</p>
+    <p>It can be used to do the following:</p>
+    <ul>
+      <li>Style an element when a user mouses over it</li>
+      <li>Style visited and unvisited links differently</li>
+      <li>Style an element when it gets focus</li>
+    </ul>
+    <h2>Syntax</h2>
+    <p>The syntax of pseudo-classes:</p>
+    <div>
+      <span style="color: brown">selector::pseduo-class</span>
+      <span>{</span>
+      <br />
+      <span style="color: red">property</span><span>:</span>
+      <span style="color: mediumblue">value</span><span>;</span>
+      <br />
+      <span>}</span>
+    </div>
+    <h2>Examples</h2>
+    <p>When you hover over the link below, it will change color:</p>
+    <p>
+      <a class="highlight" href="https://forums.homecomingservers.com/"
+        >City of Heroes Homecoming</a
+      >
+    </p>
+    <p>The unvisited link will be orange and the visited link will be green:</p>
+    <p>
+      <a href="https://forums.homecomingservers.com/"
+        >City of Heroes Homecoming</a
+      >
+    </p>
+    <p>
+      <a href="https://www.wizardingworld.com/"
+        >Wizarding World: The Official Home of Harry Potter</a
+      >
+    </p>
+    <p>
+      Move the mouse over the div element below to change its background color
+      (the div element above has also changed):
+    </p>
+    <div>Mouse Over Me</div>
+  </body>
+</html>

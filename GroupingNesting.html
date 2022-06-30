@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grouping and Nesting</title>
+  </head>
+  <style>
+#top {
+    background-color: #ccc;
+    padding: 1em
+}
+
+#top h1 {
+    color: #ff0;
+}
+
+#top p {
+    color: red;
+    font-weight: bold;
+}
+  </style>
+  <body>
+    <h2>Grouping</h2>
+    <p>
+      When several selectors share the same declarations, they may be grouped
+      into a comma-separated list.
+    </p>
+    <h3>Example</h3>
+    <p>
+      Below, you can see how 3 different selectors with the same declarations
+      can be grouped into a comma-separated list:
+    </p>
+    <uo>
+      <li>Non-grouped list:</li>
+    </uo>
+    <p>
+      h1 { font-family: sans-serif }
+      <br />
+      h2 { font-family: sans-serif }
+      <br />
+      h3 { font-family: sans-serif }
+    </p>
+    <uo>
+      <li>Grouped list:</li>
+    </uo>
+    <p>h1, h2, h3 { font-family: sans-serif }</p>
+    <p>Both examples above will yield the same results.</p>
+    <h2>Nesting</h2>
+    <p>
+      Nesting allows you to specify properties to selectors within other
+      selectors.
+    </p>
+    <h3>Example</h3>
+    <p></p>
+    <p>
+      #top { background-color: #ccc; padding: 1em }
+      <br />
+      #top h1 { color: #ff0; }
+      <br />
+      #top p { color: red; font-weight: bold; }
+    </p>
+    <p>The above code removes the need for classes or IDs on the &#60p&#62 and &#60h1&#62 tags if it is applied to HTML that looks something like this:</p>
+    <p>&#60div id="top"&#62
+        <br>
+        &#60h1&#62Chocolate curry&#60/h1&#62
+        <br>
+        &#60p&#62This is my recipe for making curry purely with chocolate&#60/p&#62
+        <br>
+        &#60p>Mmm mm mmmmm&#60/p&#62
+        <br>
+        &#60/div&#62
+    </p>
+    <p>Below is a demonstration of how the code will look when it's applied:</p>
+    <div id="top">
+        <h1>Chocolate curry</h1>
+        <p>This is my recipe for making curry purely with chocolate</p>
+        <p>Mmm mm mmmmm</p>
+    </div>   
+  </body>
+</html>

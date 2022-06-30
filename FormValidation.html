@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <script>
+    function myFunction() {
+      let x = document.getElementById("numb").value;
+      let text;
+      if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+      } else {
+        text = "Input valid";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+  <body>
+    <h1>JavaScript Form Validation</h1>
+    <p>HTML form validation can be done by JavaScript.</p>
+    <h2>Example</h2>
+    <p>
+      In the example below, input a number between 1 and 10 to receive a valid
+      input:
+    </p>
+    <input id="numb" />
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility</title>
+  </head>
+  <style>
+    .c1 {
+      color: red;
+    }
+  </style>
+  <body>
+    <h1>ARIA</h1>
+    <p>Accessible Rich Internet Applications is a set of attributes that define ways to make web content and web applications more accessible to people with disabilities.</p>
+    <h2>HTML Accessibility</h2>
+    <p>
+      It's always beneficial to write HTML code with accessibility in mind to
+      provide the user with a good way to navigate and interact with your sites.
+    </p>
+    <h2>Semantic HTML</h2>
+    <p>
+      Semantic HTML means using correct HTML elements for their correct purpose
+      as much as possible.
+    </p>
+    <p>
+      Examples of <b>semantic</b> elements: <code class="c1">&#60form&#62</code>,
+      <code class="c1">&#60table&#62</code>, <code class="c1">&#60article&#62</code> - clearly
+      defines content.
+    </p>
+    <p>
+      Examples of <b>non-semantic</b> elements: <code class="c1">&#60div&#62</code> and
+      <code class="c1">&#60span&#62</code> - tells nothing about its content.
+    </p>
+    <h3>Example</h3>
+    <p>If you need a button, use the button element and not a div element:</p>
+    <button>Click Me</button>
+    <div>Click Me</div>
+    <p>
+      A button element has more suitable styling than a div, and it is clickable
+      by default.
+    </p>
+    <h2>Headings</h2>
+    <p>The proper use of headers can make your content more clear and coherent.</p>
+    <p>It is important to use headings to show the document structure and the relationships between different sections.</p>
+    <p>There are 6 heading tags:</p>
+    <h1>Heading 1</h1> - a single topic
+    <h2>Heading 2</h2> - a subtopic
+    <h3>Heading 3</h3> - details of a topic
+    <h4>Heading 4</h4> - additional details of a topic
+    <h5>Heading 5</h5> - table of contents/lists
+    <h6>Heading 6</h6> - same as heading 5
+  <h2>Alternate Text</h2>
+  <p>The <code class="c1">alt</code> attribute provides an alternate text for an image, if the user for some reason cannot view.</p>
+  <h3>Example</h3>
+  <p>The <code class="c1">alt</code> attribute should reflect the image content, so users who cannot see the image gets an understanding of what the image contains:</p>
+  <img
+      src="https://forums.homecomingservers.com/uploads/monthly_2020_10/2400px-Issue27-fullsize.png.b4bbd047f7804c86e1b10df2b90ac37c.png"
+      alt="Issue 27"
+      style="width: 500px"
+    />
+  <h2>Good Link Text</h2>
+  <p>A link text should explain clearly what information the reader will get by clicking on that link.</p>
+  <h3>Example</h3>
+  <p>Examples of good links:</p>
+<ul>
+  <li><a href="#">Find out more about the HTML language</a></li>
+  <li>Read more about <a href="#">how to eat healthy</a></li>
+  <li><a href="#">Buy tickets to Mars here</a></li>
+</ul>
+<p>Examples of bad links:</p>
+<ul>
+  <li><a href="#">Click here</a></li>
+  <li><a href="#">Read more..</a></li>
+  <li>Buy tickets to Mars <a href="#">here</a></li>
+</ul>
+</body>
+</html>

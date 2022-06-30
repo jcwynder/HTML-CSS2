@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+  </head>
+  <style>
+      h3 {
+         color: red;
+         color: blue;
+      }
+      .example {
+          color: blueviolet;
+      }
+  </style>
+  <body>
+    <h1>CSS Specificity</h1>
+    <p>
+      If there are two or more conflicting CSS rules that point to the same
+      element, the browser follows some rules to determine which one is most
+      specific and therefore wins out.
+    </p>
+    <h2>Specificity Hierarchy</h2>
+    <p>Every selector has its place in the specificity hierarchy.</p>
+    <p>
+      There are four categories which define the specificity level of a
+      selector:
+    </p>
+    <ol>
+      <li>Inline Styles</li>
+      <li>IDs</li>
+      <li>Classes, attributes, and pseudo-classes</li>
+      <li>Elements and pseudo-elements</li>
+    </ol>
+    <h2>Calculating Specificity</h2>
+    <p>Below is a list that shows how to calculate specificity:</p>
+    <uo>
+      <li>Start at 0</li>
+      <li>Add 1 - for each element name or pseudo-element</li>
+      <li>Add 10 - for each attribute, class, or pseduo-class</li>
+      <li>Add 100 - for each ID</li>
+      <li>Add 1000 - for style attribute</li>
+    </uo>
+    <p>Look at the 3 examples below:</p>
+    <ol type="A">
+      <li>h1</li>
+      <li>#example h1</li>
+      <li><code>&#60div id="example&#62&#60h1 style="color: #ffffff"&#62Heading&#60/h1&#62&#60/div&#62</code></li>
+    </ol>
+    <p>The specificity of A is 1 (one element).</p>
+    <p>The specificity of B is 101 (one ID reference and one element).</p>
+    <p>The specificity of C is 1000 (inline styling).</p>
+    <p>Since 1 &#60 101 &#60 1000, the third rule (C) has a greater level of specificity, and therefore will be applied.</p>
+    <h2>Specificity Rules</h2>
+    <p><b>In equal specificity, the latest rule counts!</b></p>
+    <p> If the same rule is written twice into the external style sheet, then the lower rule in the style sheet is closer to the element to be styled, and therefore will be applied:</p>
+    <p><b>The latter rule is always applied!</b></p>
+    <h3>Example</h3>
+    <p><b>A class selector beats any number of element selectors!</b></p>
+    <p>A class selector such as <code>.example</code> beats h3, p, div, etc:</p>
+    <h3 class="example">Example</h3>
+  </body>
+</html>

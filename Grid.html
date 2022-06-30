@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout Module</title>
+  </head>
+  <style>
+    .item1 {
+      grid-area: header;
+    }
+    .item2 {
+      grid-area: menu;
+    }
+    .item3 {
+      grid-area: main;
+    }
+    .item4 {
+      grid-area: right;
+    }
+    .item5 {
+      grid-area: footer;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header header header header"
+        "menu main main main right right"
+        "menu footer footer footer footer footer";
+      grid-gap: 10px;
+      background-color: #ffcc00;
+      padding: 10px;
+    }
+
+    .grid-container > div {
+      background-color: #60c3fe;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    .grid-container2 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #ffcc00;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: #60c3fe;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Grid Layout</h1>
+    <p>
+      The CSS Grid Layout Module offers a grid-based layout system, with rows
+      and columns, making it easier to design web pages without having to use
+      floats and positioning.
+    </p>
+    <p>
+      The example below displays a grid with 6 columns and 3 rows, along with
+      labels:
+    </p>
+    <div class="grid-container">
+      <div class="item1">Header</div>
+      <div class="item2">Menu</div>
+      <div class="item3">Main</div>
+      <div class="item4">Right</div>
+      <div class="item5">Footer</div>
+    </div>
+    <h2>Grid Elements</h2>
+    <p>
+      A grid layout consists of a parent element, with one or more child
+      elements.
+    </p>
+    <p>
+      A Grid Layout must have a parent element with the display property set to
+      grid or inline-grid.
+    </p>
+    <p>
+      Direct child element(s) of the grid container automatically becomes grid
+      items.
+    </p>
+    <p>The example below displays a grid with 9 child elements:</p>
+    <div class="grid-container2">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>

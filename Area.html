@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Regions/Maps</title>
+</head>
+<body>
+    <h1>Area Tag</h1>
+    <p>The <code>&#60area&#62</code> tag defines an area inside an image map (an image map is an image with clickable areas).</p>
+    <p><code class="c1">&#60area&#62</code> elements are always nested inside of a <code class="c1">&#60map&#62</code> tag.</p>
+    <h2>Example</h2>
+    <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Laptop">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Smartphone">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://en.wikipedia.org/wiki/Coffee">
+</map>
+</body>
+</html>
